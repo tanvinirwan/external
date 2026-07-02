@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
+    <style>
+        :root {
+  --primary: #3b82f6;
+  --secondary: #64748b;
+  --spacing: 16px;
+}
+        .profile-card{
+            width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 2px 2px hwb(226 5% 75%);
+            background-color: #c9ced5;
+            transition: transform 0.2s ease;
+        }
+        .profile-card:hover{
+    transform: scale(1.02);
+                            }
+        img{
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+        h2{
+            color: var(--primary);
+        }
+
+        @media(max-width:480px){
+            .profile-card{
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <article style="background-color: pink; width: 80vw; height: 40vh; justify-self: center;">
-        <section style="display: flex; gap: 20px; text-align: center; justify-content: center;">
-            <img src="profile.jpg" alt="MyProfile" width="100px" height= "100px" style="border-radius: 100vw;">
+    <article class="profile-card" >
+        <section style="">
+            <img src="profileNew.png" alt="MyProfile">
             <h2>Tanvi Nirwan</h2>
-            
         </section>
         <section>
             <h3>About Me:</h3>
@@ -22,7 +54,7 @@
             </ul>
         </section>
         <section>
-            <a href="tanvinirwan@gmail.com">Contact Me</a>
+            <a href="mailto:tanvinirwan123@gmail.com">Contact Me</a>
         </section>
     </article>
 </body>
