@@ -1,0 +1,14 @@
+.container{
+    background-color: antiquewhite;
+    color: chocolate;
+    border : black 2px solid ;
+    justify-items: center;
+    margin: 10px;
+    box-shadow: 4px 4px rgba(101, 59, 59, 0.8) ;
+}
+
+
+h1{
+    color: rgb(141, 83, 8);
+    
+}
