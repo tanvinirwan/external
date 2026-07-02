@@ -11,6 +11,7 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: center;
+            flex-wrap: wrap;
 
         }
         .box1{
@@ -18,6 +19,20 @@
             margin: 10px;
             padding: 5px;
         }
+
+        .flexbox-reverse-col{
+            background-color: rgba(128, 0, 128, 0.145);
+            color: white;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+        .box{
+             background-color: rgba(70, 1, 70, 0.697);
+            margin: 10px;
+            padding: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -26,6 +41,13 @@
         <div class="box1"><p>About</p></div>
         <div class="box1"><p>Dashboard</p></div>
         <div class="box1"><p>Contact us</p></div>
+    </div>
+    <br>
+    <div class="flexbox-reverse-col">
+        <div class="box"><p>box1</p></div>
+        <div class="box"><p>box2</p></div>
+        <div class="box"><p>box3</p></div>
+        <div class="box"><p>box4</p></div>
     </div>
 </body>
 </html>
