@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all Example</title>
+</head>
+<body>
+
+    <button onclick="getData()">Get Data</button>
+
+    <h2>User</h2>
+    <div id="user"></div>
+
+    <h2>Post</h2>
+    <div id="post"></div>
+
+    <h2>Comment</h2>
+    <div id="comment"></div>
+
+    <script>
+        async function getData() {
+            try {
+
+                const responses = await Promise.all([
+                    fetch("https://jsonplaceholder.typicode.com/users/1"),
+                    fetch("https://jsonplaceholder.typicode.com/posts/1"),
+                    fetch("https://jsonplaceholder.typicode.com/comments/1")
+                ]);
+
+                const [user, post, comment] = await Promise.all(
+                    responses.map(res => res.json())
+                );
+
+                document.getElementById("user").innerHTML = `
+                    <p>Name: ${user.name}</p>
+                    <p>Email: ${user.email}</p>
+                `;
+
+                document.getElementById("post").innerHTML = `
+                    <p>Title: ${post.title}</p>
+                    <p>${post.body}</p>
+                `;
+
+                document.getElementById("comment").innerHTML = `
+                    <p>Name: ${comment.name}</p>
+                    <p>Email: ${comment.email}</p>
+                `;
+
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    </script>
+
+</body>
+</html>
