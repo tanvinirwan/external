@@ -1,0 +1,14 @@
+.container{
+    background-color: #101B2D;
+    color: #FAF6EE;
+    justify-self: center;
+    align-self: center ;
+    padding: 20px;
+    margin: 100px;
+    border-radius: 20px;
+}
+
+
+.sign-up-image{
+    border-radius: 30px ;
+}
